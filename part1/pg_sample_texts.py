@@ -24,7 +24,7 @@ Language: English
 
 *** START OF THIS PROJECT GUTENBERG EBOOK THE DIVINE COMEDY, COMPLETE ***
 [...]
-His glory, by whose might all things are mov'd,
+1His glory, by whose might all things are mov'd,
 Pierces the universe, and in one part
 [...]
 End of Project Gutenberg's The Divine Comedy, Complete, by Dante Alighieri
