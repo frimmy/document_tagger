@@ -1,6 +1,5 @@
 import re
 import sys
-from pg_sample_texts import DIV_COMM, MAG_CART
 from argparse import ArgumentParser #import the ArgumentParser object from this module, allows for more than one argument into command line
 import os
 
@@ -17,8 +16,6 @@ arguments = argparser.parse_args() #unpacks the arguments entered on the command
 
 terms = arguments.search #stores search terms into variable t 
 directory = arguments.directory
-
-documents = [DIV_COMM, MAG_CART] #for testing regex in proj gut pt 1
 
 # first we need to do something with the user supplied keywords
 # which we're getting with sys.argv. Remember, the script name itself
