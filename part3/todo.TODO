@@ -1,0 +1,21 @@
+Todo:
+Create separate functions to handle the following items:
+ ☐ Iterating over and opening files
+ ☐ Compiling user supplied keywords into  regular expressions
+ ☐ Counting keywords in a document
+ ☐ Stripping out metadata (author, title, etc.) from Project Gutenberg documents
+ ☐ A main() function that calls the other functions, supplying them with the necessary user supplied arguments at run time.  
+
+ ☐ document_tagger_final.py should feature an if __name__ == '__main__'  condition, and it should run your main() function, supplying it with any required run time parameters.
+
+ ☐ Avoid creating any functions that directly change the arguments they are passed. 
+
+ ☐ Use short, descriptive function names that give the user information about what the function does. If you’re having trouble naming your function a single name because it does a bunch of disparate things, this may be a sign that your function should really be split into 2 or more functions. The exception to this is a main() function, which is kind of like a meta-function, in that it would typically be used to call other functions. 
+
+Strategy:
+Start out by using everyday words to describe what the script needs to accomplish. Once you can describe it in words, think about moments in this story. Think about and the key actions and actors these moments involve. These are probably good candidates for functions and variables. 
+Try to work through this project systematically and incrementally. Once you’ve defined the overall arc of the function, code one function at a time. 
+Each time you get a function working, make sure to save and commit your changes to your repo.
+If you need to play around with your code as you’re writing it, you can run your Python interpreter from the command line. 
+If you get stuck or want feedback, reach out to your Google+ community or mentor. 
+Once you’ve completed this project, make sure to save it to a remote Git repository, and share it with your mentor and your classmates for feedback.
