@@ -18,14 +18,14 @@ def parse_for_terms_and_dir():
 #Iterating over and opening files
 
 def files_in_dir(directory, terms, metadata):
+	# compile regex searches for metadata and search terms
+	search_terms_and_metadata = compiled_search(terms, metadata)
 	for i,doc in enumerate(os.listdir(directory)):
 		if doc.endswith('.txt'):
 			print "Processing file {}".format(i+1)
 			doc_path = os.path.join(directory, doc)
 			with open(doc_path, 'r') as d:
 				full_text = d.read()
-			# compile regex searches for metadata and search terms
-			search_terms_and_metadata = compiled_search(terms, metadata)
 			# print meta
 			print "***" * 25
 			print_metadata(search_doc(search_terms_and_metadata["metasearch"], full_text), doc, metadata)
@@ -38,10 +38,11 @@ def files_in_dir(directory, terms, metadata):
 def search_doc(metasearch, full_text):
 	metaresults = {}
 	for i,j in metasearch.items():
-		if re.search(j, full_text):
-			metaresults[i] = re.search(j, full_text).group(i)
+		results = re.search(j, full_text)
+		if results:
+			metaresults[i] = results.group(i)
 		else:
-			metaresults[i] = re.search(j, full_text)
+			metaresults[i] = results
 	return metaresults
 
 # Compiling user supplied keywords into  regular expressions
